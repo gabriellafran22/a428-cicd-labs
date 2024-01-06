@@ -1,6 +1,6 @@
 node {
     checkout scm
-    docker.image('node:16-buster-slim').inside('-p 3001:3000') {
+    docker.image('node:16-buster-slim').inside('-p 3001:3001') {
                 withEnv(["CI=true"]){
                         stage('Build') {
                                 sh 'npm install'
